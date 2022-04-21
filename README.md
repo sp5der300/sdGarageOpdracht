@@ -13,3 +13,9 @@ klant, administratief medewerker, kassa medewerker, backoffice medewerker, monte
 11. tests maken/schrijven/testen
 
 **elke keer dat je iets afmaakt, testen, als soort rode draad
+
+
+IN VOLGORDE BIJ WIJZIGINGEN
+git add .
+git commit -m "*message*"
+git push
