@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-04-25T09:57:22.842Z" agent="5.0 (Macintosh)" etag="LW42dcaOEAET1eY8BSTi" version="17.4.5" type="github">
+<mxfile host="app.diagrams.net" modified="2022-04-25T12:12:33.690Z" agent="5.0 (Macintosh)" etag="U9jAOAtXgmURmdx90vJq" version="17.4.5" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1051" dy="632" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -10,9 +10,9 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="DcZAj01u_6LNcoOJSPj7-18" value="Mechanic" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="551" y="292" width="160" height="264" as="geometry" />
+          <mxGeometry x="557" y="302" width="160" height="264" as="geometry" />
         </mxCell>
-        <mxCell id="DcZAj01u_6LNcoOJSPj7-19" value="- Name&#xa;- Function&#xa;- workingOnCar : Auto&#xa;- role : Enum&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="DcZAj01u_6LNcoOJSPj7-18">
+        <mxCell id="DcZAj01u_6LNcoOJSPj7-19" value="- Name&#xa;- Function&#xa;- workingOnCar : Car&#xa;- role : Enum&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="DcZAj01u_6LNcoOJSPj7-18">
           <mxGeometry y="26" width="160" height="82" as="geometry" />
         </mxCell>
         <mxCell id="DcZAj01u_6LNcoOJSPj7-20" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="DcZAj01u_6LNcoOJSPj7-18">
@@ -22,7 +22,7 @@
           <mxGeometry y="116" width="160" height="148" as="geometry" />
         </mxCell>
         <mxCell id="DcZAj01u_6LNcoOJSPj7-22" value="Customer" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="340" y="289" width="160" height="276" as="geometry" />
+          <mxGeometry x="339" y="341" width="160" height="276" as="geometry" />
         </mxCell>
         <mxCell id="DcZAj01u_6LNcoOJSPj7-23" value="- Name&#xa;- Address&#xa;- Function&#xa;- role : Enum&#xa;- customerNumber&#xa;&#xa;&#xa;&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="DcZAj01u_6LNcoOJSPj7-22">
           <mxGeometry y="26" width="160" height="104" as="geometry" />
@@ -46,7 +46,7 @@
           <mxGeometry y="131" width="171" height="103" as="geometry" />
         </mxCell>
         <mxCell id="DcZAj01u_6LNcoOJSPj7-36" value="Payments&#xa;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="118" y="296" width="161" height="232" as="geometry" />
+          <mxGeometry x="115" y="348" width="161" height="232" as="geometry" />
         </mxCell>
         <mxCell id="DcZAj01u_6LNcoOJSPj7-37" value="- CustomerName&#xa;- OrderNr&#xa;- Price&#xa;&#xa;&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="DcZAj01u_6LNcoOJSPj7-36">
           <mxGeometry y="26" width="161" height="89" as="geometry" />
@@ -58,25 +58,25 @@
           <mxGeometry y="123" width="161" height="109" as="geometry" />
         </mxCell>
         <mxCell id="DcZAj01u_6LNcoOJSPj7-46" value="Orders" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="366" y="12" width="160" height="230" as="geometry" />
+          <mxGeometry x="366" y="12" width="160" height="247" as="geometry" />
         </mxCell>
-        <mxCell id="DcZAj01u_6LNcoOJSPj7-47" value="- Name&#xa;- Date&#xa;- OrderNr&#xa;- Payment&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="DcZAj01u_6LNcoOJSPj7-46">
-          <mxGeometry y="26" width="160" height="85" as="geometry" />
+        <mxCell id="DcZAj01u_6LNcoOJSPj7-47" value="- Name&#xa;- Date&#xa;- OrderNr&#xa;- Payment&#xa;- workedOnBy ; Mechanic" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="DcZAj01u_6LNcoOJSPj7-46">
+          <mxGeometry y="26" width="160" height="102" as="geometry" />
         </mxCell>
         <mxCell id="DcZAj01u_6LNcoOJSPj7-48" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="DcZAj01u_6LNcoOJSPj7-46">
-          <mxGeometry y="111" width="160" height="8" as="geometry" />
+          <mxGeometry y="128" width="160" height="8" as="geometry" />
         </mxCell>
         <mxCell id="DcZAj01u_6LNcoOJSPj7-49" value="+ addReceipt()&#xa;+ addOrderNr()&#xa;+ paymentFullfilled()&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="DcZAj01u_6LNcoOJSPj7-46">
-          <mxGeometry y="119" width="160" height="111" as="geometry" />
+          <mxGeometry y="136" width="160" height="111" as="geometry" />
         </mxCell>
         <mxCell id="DcZAj01u_6LNcoOJSPj7-55" value="Car" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="593" y="14" width="165" height="239" as="geometry" />
-        </mxCell>
-        <mxCell id="DcZAj01u_6LNcoOJSPj7-56" value="- customer : Customer&#xa;- OrderNr&#xa;- carBrand- constructionYear&#xa;- workedOnBy : Mechanic&#xa;&#xa;&#xa;&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="DcZAj01u_6LNcoOJSPj7-55">
-          <mxGeometry y="26" width="165" height="117" as="geometry" />
+          <mxGeometry x="627" y="16" width="165" height="239" as="geometry" />
         </mxCell>
         <mxCell id="DcZAj01u_6LNcoOJSPj7-57" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="DcZAj01u_6LNcoOJSPj7-55">
-          <mxGeometry y="143" width="165" height="8" as="geometry" />
+          <mxGeometry y="26" width="165" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="DcZAj01u_6LNcoOJSPj7-56" value="- customer : Customer&#xa;- OrderNr&#xa;- carBrand- constructionYear&#xa;- workedOnBy : Mechanic&#xa;&#xa;&#xa;&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="DcZAj01u_6LNcoOJSPj7-55">
+          <mxGeometry y="34" width="165" height="117" as="geometry" />
         </mxCell>
         <mxCell id="DcZAj01u_6LNcoOJSPj7-58" value="+?" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="DcZAj01u_6LNcoOJSPj7-55">
           <mxGeometry y="151" width="165" height="88" as="geometry" />
