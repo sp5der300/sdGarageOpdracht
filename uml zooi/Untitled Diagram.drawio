@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-04-25T09:57:02.248Z" agent="5.0 (Macintosh)" etag="U7UMKuDwLHF3Fmm0i8ma" version="17.4.5" type="github">
+<mxfile host="app.diagrams.net" modified="2022-04-25T09:57:22.842Z" agent="5.0 (Macintosh)" etag="LW42dcaOEAET1eY8BSTi" version="17.4.5" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1051" dy="632" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -82,7 +82,7 @@
           <mxGeometry y="151" width="165" height="88" as="geometry" />
         </mxCell>
         <mxCell id="DcZAj01u_6LNcoOJSPj7-59" value="&lt;div align=&quot;left&quot;&gt;(administrative worker, backoffie worker, register worker)&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="190" y="5" width="120" height="60" as="geometry" />
+          <mxGeometry x="190" y="12" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="DcZAj01u_6LNcoOJSPj7-68" value="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.017;entryY=0.341;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="DcZAj01u_6LNcoOJSPj7-47" target="DcZAj01u_6LNcoOJSPj7-56">
           <mxGeometry relative="1" as="geometry" />
