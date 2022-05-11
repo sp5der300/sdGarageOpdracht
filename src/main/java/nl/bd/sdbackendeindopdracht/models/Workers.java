@@ -1,44 +1,32 @@
 package nl.bd.sdbackendeindopdracht.models;
 
+import lombok.*;
 import nl.bd.sdbackendeindopdracht.security.enums.Roles;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table (name = "workersTable")
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+@ToString
+
 public class Workers {
-
+    @Id
+    private Long id;
+    @Column
     private String name;
+    @Column
     private String function;
+    @Column
     private Roles roles;
-
-    public Workers(String name, String function, Roles roles) {
-        this.name = name;
-        this.function = function;
-        this.roles = roles;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getFunction() {
-        return function;
-    }
-
-    public Roles getRoles() {
-        return roles;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setFunction(String function) {
-        this.function = function;
-    }
-
-    public void setRoles(Roles roles) {
-        this.roles = roles;
-    }
-
-
+    
 
 }
 

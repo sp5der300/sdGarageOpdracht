@@ -1,38 +1,30 @@
 package nl.bd.sdbackendeindopdracht.models;
 
-public class Payments {
+import lombok.*;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table (name = "paymentsTable")
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+@ToString
+
+public class Payments {
+    @Id
+    private Long id;
+    @Column
     private String customerName;
+    @Column
     private int orderNr;
+    @Column
     private double price;
 
-    public Payments(String customerName, int orderNr, double price){
-        this.customerName = customerName;
-        this.orderNr = orderNr;
-        this.price = price;
-    }
 
-    public String getCustomerName() {
-        return customerName;
-    }
-
-    public int getOrderNr() {
-        return orderNr;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
-    }
-
-    public void setOrderNr(int orderNr) {
-        this.orderNr = orderNr;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
 }

@@ -1,10 +1,20 @@
 package nl.bd.sdbackendeindopdracht.models;
 
-public class Car {
+import javax.persistence.*;
 
+@Entity
+@Table (name = "carTable")
+
+public class Car {
+    @Id
+    private Long id;
+    @ManyToOne
     private Customer customer;
+    @Column
     private int orderNr;
+    @Column
     private int constructionYear;
+    @ManyToOne
     private Mechanic workedOnBy;
 
     public Car(Customer customer, int orderNr, int constructionYear, Mechanic workedOnBy){
@@ -12,6 +22,10 @@ public class Car {
         this.orderNr = orderNr;
         this.constructionYear = constructionYear;
         this.workedOnBy = workedOnBy;
+    }
+
+    public Car() {
+
     }
 
     public Customer getCustomer() {
