@@ -30,4 +30,20 @@ public class OrderService {
     public List<Order> getAllOrders(){
         return orderRepository.findAll();
     }
+
+    public Order editOrder(OrderRequest order, Long orderId) {
+        Order orderFromDatabase = null;
+        if (orderRepository.findById(orderId).isEmpty()) {
+            throw new RuntimeException("Order is empty or does not exist.");
+        }
+        else{
+            orderFromDatabase = orderRepository.findById(orderId).get();
+            orderFromDatabase.setName(order.getName());
+            orderFromDatabase.setCarBrand(order.getCarBrand());
+            orderFromDatabase.setDate(order.getDate());
+            orderFromDatabase.setOrderNr(order.getOrderNr());
+            orderFromDatabase.setTotalPrice(order.getTotalPrice());
+        }
+        return orderRepository.save(orderFromDatabase);
+    }
 }

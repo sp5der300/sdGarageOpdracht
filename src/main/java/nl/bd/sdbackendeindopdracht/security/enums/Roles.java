@@ -5,6 +5,7 @@ public enum Roles {
     BACKOFFICEWORKER,
     REGISTERWORKER,
     ADMINISTRATIVEWORKER,
-    CUSTOMER
-
+    CUSTOMER,
+    USER,
+    ADMIN
 }

@@ -2,7 +2,9 @@ package nl.bd.sdbackendeindopdracht.services;
 
 import nl.bd.sdbackendeindopdracht.models.Car;
 import nl.bd.sdbackendeindopdracht.models.Customer;
+import nl.bd.sdbackendeindopdracht.models.Mechanic;
 import nl.bd.sdbackendeindopdracht.models.Order;
+import nl.bd.sdbackendeindopdracht.models.requestModels.MechanicRequest;
 import nl.bd.sdbackendeindopdracht.repos.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -35,6 +37,7 @@ public class WorkersService {
     }
 
 
-
-
+    public Mechanic addNewMechanic(MechanicRequest mechanicRequest) {
+        return null;
+    }
 }

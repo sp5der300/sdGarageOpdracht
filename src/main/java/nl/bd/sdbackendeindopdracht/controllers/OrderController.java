@@ -3,6 +3,7 @@ package nl.bd.sdbackendeindopdracht.controllers;
 import nl.bd.sdbackendeindopdracht.models.Order;
 import nl.bd.sdbackendeindopdracht.models.requestModels.OrderRequest;
 import nl.bd.sdbackendeindopdracht.services.OrderService;
+import org.aspectj.weaver.ast.Or;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,6 +28,11 @@ public class OrderController {
     @PostMapping("/newOrder")
     public Order newOrder(@RequestBody OrderRequest order){
         return orderService.addNewOrder(order);
+    }
+
+    @PutMapping("/editOrder/order={orderId}")
+    public Order editOrder(@RequestBody OrderRequest order, @PathVariable("orderId") Long orderId){
+        return orderService.editOrder(order, orderId);
     }
 
 }
