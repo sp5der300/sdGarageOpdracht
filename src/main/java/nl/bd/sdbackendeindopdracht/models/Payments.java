@@ -15,10 +15,9 @@ import javax.persistence.Table;
 @Getter
 @Setter
 @ToString
-
 public class Payments {
     @Id
-    private Long id;
+    private Long paymentsId;
     @Column
     private String customerName;
     @Column

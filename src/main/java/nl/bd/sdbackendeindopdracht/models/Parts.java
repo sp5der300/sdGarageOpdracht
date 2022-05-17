@@ -17,9 +17,9 @@ import java.util.List;
 public class Parts {
 
     @Id
-    private Long id;
+    private Long partsId;
     @Column
-    private String partName;
+    private String name;
     @Column
     private double partPrice;
 

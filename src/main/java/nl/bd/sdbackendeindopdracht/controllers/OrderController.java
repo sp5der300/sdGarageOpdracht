@@ -35,4 +35,9 @@ public class OrderController {
         return orderService.editOrder(order, orderId);
     }
 
+    @DeleteMapping
+    public void deleteOrder(Long id){
+        orderService.deleteOrder(id);
+    }
+
 }

@@ -1,9 +1,6 @@
 package nl.bd.sdbackendeindopdracht.models;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -13,36 +10,42 @@ import java.util.Collection;
 import java.util.Collections;
 import nl.bd.sdbackendeindopdracht.security.enums.Roles;
 
+@Entity
+@Table(name = "appUsers")
 @Getter
 @Setter
-@EqualsAndHashCode
 @NoArgsConstructor
-@Entity
+@AllArgsConstructor
+@Builder
+@ToString
 public class AppUser implements UserDetails {
 
     @Id
-    @SequenceGenerator(name = "user_sequence", sequenceName = "user_sequence", allocationSize = 1)
+    @SequenceGenerator(name = "user_sequence", sequenceName = "user_sequence")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_sequence")
 
-    private Long id;
-    private String name;
+    private Long userId;
+    @Column(name ="full_name_column")
+    private String fullName;
+    @Column(name ="username_column")
     private String username;
+    @Column(name ="address_column")
+    private String address;
+    @Column(name ="customer_number_column")
+    private int customerNumber;
+    @Column(name ="email_column")
     private String email;
+    @Column(name ="password_column")
     private String password;
     @Enumerated(EnumType.STRING)
+    @Column(name ="user_role_column")
     private Roles userRole;
+    @Column(name ="locked_column")
     private Boolean locked;
+    @Column(name ="enabled_column")
     private Boolean enabled;
-
-    public AppUser(String name, String username, String email, String password, Roles userRole, Boolean locked, Boolean enabled) {
-        this.name = name;
-        this.username = username;
-        this.email = email;
-        this.password = password;
-        this.userRole = userRole;
-        this.locked = locked;
-        this.enabled = enabled;
-    }
+    @Column(name ="function_column")
+    private String function;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

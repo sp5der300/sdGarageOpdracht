@@ -46,4 +46,8 @@ public class OrderService {
         }
         return orderRepository.save(orderFromDatabase);
     }
+
+    public void deleteOrder(Long id) {
+        orderRepository.deleteById(id);
+    }
 }

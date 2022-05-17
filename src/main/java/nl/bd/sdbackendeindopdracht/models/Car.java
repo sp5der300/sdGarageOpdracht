@@ -4,20 +4,19 @@ import javax.persistence.*;
 
 @Entity
 @Table (name = "carTable")
-
 public class Car {
     @Id
-    private Long id;
+    private Long carId;
     @ManyToOne
-    private Customer customer;
+    private AppUser customer;
     @Column
     private int orderNr;
     @Column
     private int constructionYear;
     @ManyToOne
-    private Mechanic workedOnBy;
+    private AppUser workedOnBy;
 
-    public Car(Customer customer, int orderNr, int constructionYear, Mechanic workedOnBy){
+    public Car(AppUser customer, int orderNr, int constructionYear, AppUser workedOnBy){
         this.customer = customer;
         this.orderNr = orderNr;
         this.constructionYear = constructionYear;
@@ -28,7 +27,7 @@ public class Car {
 
     }
 
-    public Customer getCustomer() {
+    public AppUser getCustomer() {
         return customer;
     }
 
@@ -40,11 +39,11 @@ public class Car {
         return constructionYear;
     }
 
-    public Mechanic getWorkedOnBy() {
+    public AppUser getWorkedOnBy() {
         return workedOnBy;
     }
 
-    public void setCustomer(Customer customer) {
+    public void setCustomer(AppUser customer) {
         this.customer = customer;
     }
 
@@ -56,7 +55,7 @@ public class Car {
         this.constructionYear = constructionYear;
     }
 
-    public void setWorkedOnBy(Mechanic workedOnBy) {
+    public void setWorkedOnBy(AppUser workedOnBy) {
         this.workedOnBy = workedOnBy;
     }
 }

@@ -14,11 +14,10 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
-
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long orderId;
     @Column
     private String name;
     @Column
@@ -28,7 +27,7 @@ public class Order {
     @Column
     private Double orderNr;
     @ManyToOne
-    private Mechanic workedOnBy;
+    private AppUser workedOnBy;
     @ManyToMany
     public List<Parts> partsList;
     @Column

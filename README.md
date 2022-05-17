@@ -29,6 +29,10 @@ IN VOLGORDE BIJ WIJZIGINGEN
 
 user -> controller -> service -> repository -> database
 
+voor iedere model een controller. voor de MVP moet je voor alle controllers 4 endpoints hebben
+CRUD create read update delete
+postmapping, putmapping, deletemapping, getmapping
+
 CODE
 
 public Order(String name, Date date, Double orderNr, String carBrand, Mechanic workedOnBy) {
