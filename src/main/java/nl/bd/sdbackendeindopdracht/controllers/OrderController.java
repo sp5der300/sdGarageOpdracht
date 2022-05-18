@@ -2,8 +2,8 @@ package nl.bd.sdbackendeindopdracht.controllers;
 
 import nl.bd.sdbackendeindopdracht.models.Order;
 import nl.bd.sdbackendeindopdracht.models.requestModels.OrderRequest;
+import nl.bd.sdbackendeindopdracht.models.requestModels.PartsRequest;
 import nl.bd.sdbackendeindopdracht.services.OrderService;
-import org.aspectj.weaver.ast.Or;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -35,9 +35,14 @@ public class OrderController {
         return orderService.editOrder(order, orderId);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/admin/deleteOrder")
     public void deleteOrder(Long id){
         orderService.deleteOrder(id);
+    }
+
+    @PutMapping("/mechanic/addPartsToOrder/order={orderId}")
+    public Order addPartsToOrder(@PathVariable("orderId") Long orderId, @RequestBody PartsRequest partsRequest){
+        return orderService.addPartsToOder(orderId, partsRequest);
     }
 
 }

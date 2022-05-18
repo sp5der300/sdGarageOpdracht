@@ -3,7 +3,6 @@ package nl.bd.sdbackendeindopdracht.models.requestModels;
 import lombok.*;
 
 import java.util.Date;
-import java.util.List;
 
 @Getter
 @EqualsAndHashCode

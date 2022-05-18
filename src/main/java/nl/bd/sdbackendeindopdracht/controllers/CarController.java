@@ -19,7 +19,7 @@ public class CarController {
         this.carService = carService;
     }
 
-    @GetMapping
+    @GetMapping("/allCars")
     public List<Car> getAllCars(){
         return carService.getAllCars();
     }
@@ -29,7 +29,7 @@ public class CarController {
         return carService.getCarById(id);
     }
 
-    @PostMapping("/")
+    @PostMapping("/admin/AddNewCar")
     public Car addNewCar(@RequestBody Car car){
         return carService.addNewCar(car);
     }
@@ -39,11 +39,9 @@ public class CarController {
         return carService.editCar(id, car);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/admin/deleteCar")
     public void deleteCar(Long id){
         carService.deleteCar(id);
     }
-
-
 
 }

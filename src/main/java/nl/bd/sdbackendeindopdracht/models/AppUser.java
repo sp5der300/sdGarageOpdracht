@@ -31,8 +31,6 @@ public class AppUser implements UserDetails {
     private String username;
     @Column(name ="address_column")
     private String address;
-    @Column(name ="customer_number_column")
-    private int customerNumber;
     @Column(name ="email_column")
     private String email;
     @Column(name ="password_column")

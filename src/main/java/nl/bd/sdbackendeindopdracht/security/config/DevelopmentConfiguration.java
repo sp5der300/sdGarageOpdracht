@@ -28,7 +28,6 @@ public class DevelopmentConfiguration {
                         .password(bCryptPasswordEncoder.encode("sp5der"))
                         .userRole(Roles.ADMIN)
                         .build();
-
                 appUserRepository.save(admin);
             }
         };

@@ -30,10 +30,14 @@ public class PartsController {
         return partsService.addNewPart(parts);
     }
 
-    @PutMapping("/editParts/parts={partsId}")
+    @PutMapping("/mechanic/editParts/parts={partsId}")
     public Parts editParts(@RequestBody PartsRequest parts, @PathVariable("partsId") Long partsId){
         return partsService.editParts(parts, partsId);
     }
 
+    @DeleteMapping("/admin/deleteParts")
+    public void deleteParts(Long id){
+        partsService.deleteParts(id);
+    }
 
 }

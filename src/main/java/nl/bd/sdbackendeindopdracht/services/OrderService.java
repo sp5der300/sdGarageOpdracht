@@ -2,7 +2,9 @@ package nl.bd.sdbackendeindopdracht.services;
 
 
 import nl.bd.sdbackendeindopdracht.models.Order;
+import nl.bd.sdbackendeindopdracht.models.Parts;
 import nl.bd.sdbackendeindopdracht.models.requestModels.OrderRequest;
+import nl.bd.sdbackendeindopdracht.models.requestModels.PartsRequest;
 import nl.bd.sdbackendeindopdracht.repos.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -49,5 +51,21 @@ public class OrderService {
 
     public void deleteOrder(Long id) {
         orderRepository.deleteById(id);
+    }
+
+    public Order addPartsToOder(Long orderId, PartsRequest partsRequest) {
+        Order orderFromDatabase;
+        if (orderRepository.findById(orderId).isEmpty()){
+            throw new RuntimeException("Order is empty or does not exist.");
+        }
+        orderFromDatabase = orderRepository.findById(orderId).get();
+        Parts newParts = Parts.builder()
+                .partName(partsRequest.getPartName())
+                .partPrice(partsRequest.getPartPrice())
+                .build();
+        orderFromDatabase.addPartToOrder(newParts);
+        return orderRepository.save(orderFromDatabase);
+        //todo eerst de order uit de database halen, vervolgens nieuwe parts aanmaken, deze parts toevoegen aan de order
+        //todo en de order opslaan
     }
 }

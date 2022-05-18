@@ -2,6 +2,7 @@ package nl.bd.sdbackendeindopdracht.security.config;
 
 
 import lombok.AllArgsConstructor;
+import nl.bd.sdbackendeindopdracht.security.enums.Roles;
 import nl.bd.sdbackendeindopdracht.services.AppUserService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,8 +12,6 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-
-import javax.management.MXBean;
 
 @Configuration
 @AllArgsConstructor
@@ -27,8 +26,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable()
                 .authorizeRequests()
-                    .antMatchers("API/v1/registration/**")
-                    .permitAll()
+                .antMatchers("/API/v1/*/admin/**").hasAnyAuthority(Roles.ADMIN.name())
+                .antMatchers("API/v1/*/mechanic/").hasAnyAuthority(Roles.MECHANIC.name())
+                .antMatchers("API/v1/**").hasAnyAuthority(Roles.BACKOFFICEWORKER.name(), Roles.ADMIN.name(),
+                        Roles.REGISTERWORKER.name(), Roles.MECHANIC.name(), Roles.APPUSER.name())
                 .anyRequest()
                 .authenticated().and()
                 .formLogin()

@@ -33,4 +33,8 @@ public class Order {
     @Column
     public Double totalPrice;
 
+    public void addPartToOrder(Parts parts){
+        this.partsList.add(parts);
+    }
+
 }

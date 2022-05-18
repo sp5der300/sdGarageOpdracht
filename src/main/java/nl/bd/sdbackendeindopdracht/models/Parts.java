@@ -3,7 +3,6 @@ package nl.bd.sdbackendeindopdracht.models;
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table (name = "partsTable")
@@ -19,7 +18,7 @@ public class Parts {
     @Id
     private Long partsId;
     @Column
-    private String name;
+    private String partName;
     @Column
     private double partPrice;
 
