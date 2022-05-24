@@ -36,7 +36,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and().httpBasic();
         //todo achter formLogin nog .disable -deze disable moet je weghalen als je users wilt toevoegen.
 
-
     }
 
     @Override

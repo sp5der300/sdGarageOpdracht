@@ -14,8 +14,9 @@ import javax.persistence.*;
 @ToString
 
 public class Parts {
-
+//todo alle column namen
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long partsId;
     @Column
     private String partName;

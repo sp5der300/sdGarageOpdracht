@@ -1,19 +1,29 @@
 package nl.bd.sdbackendeindopdracht.models;
 
+import lombok.*;
+
 import javax.persistence.*;
 
 @Entity
 @Table (name = "carTable")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@ToString
 public class Car {
     @Id
     private Long carId;
     @ManyToOne
+    @JoinColumn(name = "customer_userId", referencedColumnName = "userId")
     private AppUser customer;
-    @Column
+    @Column(name = "order_nr_column")
     private int orderNr;
-    @Column
+    @Column(name = "construction_year_column")
     private int constructionYear;
     @ManyToOne
+    @JoinColumn(name = "mechanic_userId", referencedColumnName = "userId")
     private AppUser workedOnBy;
 
     public Car(AppUser customer, int orderNr, int constructionYear, AppUser workedOnBy){
@@ -23,39 +33,4 @@ public class Car {
         this.workedOnBy = workedOnBy;
     }
 
-    public Car() {
-
-    }
-
-    public AppUser getCustomer() {
-        return customer;
-    }
-
-    public int getOrderNr() {
-        return orderNr;
-    }
-
-    public int getConstructionYear() {
-        return constructionYear;
-    }
-
-    public AppUser getWorkedOnBy() {
-        return workedOnBy;
-    }
-
-    public void setCustomer(AppUser customer) {
-        this.customer = customer;
-    }
-
-    public void setOrderNr(int orderNr) {
-        this.orderNr = orderNr;
-    }
-
-    public void setConstructionYear(int constructionYear) {
-        this.constructionYear = constructionYear;
-    }
-
-    public void setWorkedOnBy(AppUser workedOnBy) {
-        this.workedOnBy = workedOnBy;
-    }
 }

@@ -1,5 +1,6 @@
 package nl.bd.sdbackendeindopdracht.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -24,6 +25,7 @@ public class AppUser implements UserDetails {
     @SequenceGenerator(name = "user_sequence", sequenceName = "user_sequence")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_sequence")
 
+    @Column(name = "userId")
     private Long userId;
     @Column(name ="full_name_column")
     private String fullName;
@@ -46,6 +48,7 @@ public class AppUser implements UserDetails {
     private String function;
 
     @Override
+    @JsonIgnore
     public Collection<? extends GrantedAuthority> getAuthorities() {
         SimpleGrantedAuthority authority = new SimpleGrantedAuthority(userRole.name());
         return Collections.singletonList(authority);

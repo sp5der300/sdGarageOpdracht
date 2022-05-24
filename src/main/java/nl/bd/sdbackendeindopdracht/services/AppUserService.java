@@ -48,7 +48,7 @@ public class AppUserService implements UserDetailsService {
     }
 
     public AppUser editAppUser(AppUserRequest appUser, Long appUserId) {
-        AppUser appUserFromDatabase = null;
+        AppUser appUserFromDatabase;
         if (appUserRepository.findById(appUserId).isEmpty()){
             throw new RuntimeException("AppUser is empty or does not exist.");
         }
