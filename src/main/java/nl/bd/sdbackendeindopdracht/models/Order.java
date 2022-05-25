@@ -16,7 +16,6 @@ import java.util.List;
 @ToString
 public class Order {
 
-    //todo ff alle column namen en dergelijke maken nog
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long orderId;

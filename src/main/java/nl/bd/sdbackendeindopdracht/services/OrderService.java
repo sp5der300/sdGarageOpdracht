@@ -65,7 +65,6 @@ public class OrderService {
                 .build();
         orderFromDatabase.addPartToOrder(newParts);
         return orderRepository.save(orderFromDatabase);
-        //todo eerst de order uit de database halen, vervolgens nieuwe parts aanmaken, deze parts toevoegen aan de order
-        //todo en de order opslaan
+
     }
 }

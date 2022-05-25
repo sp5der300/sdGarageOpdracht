@@ -39,5 +39,5 @@ public class AppUserController {
         return appUserService.editAppUser(appUser, appUserId);
     }
 
-//todo put endppint maken
+
 }
